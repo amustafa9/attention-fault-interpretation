@@ -2,21 +2,22 @@
 Accurate interpretation of visual data for relevant information forms an important component of many real-world applications such as medical disease diagnosis, geological hazard assessment, hydrocarbon exploration, etc. Producing fine-grained annotations on images is an expensive, laborious, and time-consuming process. The human brain is wired to selectively focus its attention on certain aspects of the visual scene. This perception mechanism is driven both by low-level signal cues, such as changes in color, contrast, intensity, shapes etc., as well as high-level cognitive factors such as one’s prior knowledge, goals, expectations, and constraints with respect to the task at hand. These attentional factors, referred to as bottom-up and top-down attention respectively, play an important role in determining the final annotations that get produced for a given visual scene, often at the cost of leaving out a lot of visual information the brain deems to be unimportant with regard to the task of interest. Mapping geological faults on 3D seismic volumes is one such application where human attention selectivity results in highly incomplete fault annotations. Conventional supervised learning methods treat regions of missed fault labels as negatives, resulting in non-optimal learning for the machine learning model. We propose a method to model visual attention and incorporate it into data sampling and model training procedures. We demonstrate the utility of this approach for mapping faults on seismic volumes using pretrained 3D convolutional neural networks (CNNs). Using an annotated seismic dataset from NW Australia, we show quantitatively and qualitatively that modeling visual attention leads to significant performance gains even with limited, incompletely labeled seismic training data.
 ![Local Image](demo/masking-process.png)
 
-# Preprint and Citation
+# Citation
 This repository contains codes for our paper titled "Visual Attention Guided Learning 
-with Incomplete Labels for Seismic Fault Interpretation". The manuscript is currently undergoing review at IEEE TGRS. 
-The preprint of an earlier version of the manuscript may be accessed at https://eartharxiv.org/repository/view/5558/.
-
-Until the full published version is available, we request that you cite the preprint in accordance with the bibtex code 
-below:
+with Incomplete Labels for Seismic Fault Interpretation". The manuscript has been accepted for publication at the IEEE Transactions of Geoscience and Remote Sensing (TGRS). 
+The full text PDF can be accessed [here](https://drive.google.com/file/d/1wjpv8Xj76ZOp-2mKiRHjeFe5jK2SRWYK/view?usp=drive_link). We request that you cite the publication using the bibtex provided below.
 
 ```bibtex
-@article{mustafa2023adaptive,
-  title={Adaptive Finetuning of 3D CNNs with Interpretation Uncertainty for Seismic Fault Prediction},
-  author={Mustafa, Ahmad and AlRegib, Ghassan and Rastegar, Reza},
-  year={2023},
-  publisher={EarthArXiv}
-}
+@article{10449677,
+  author={Mustafa, Ahmad and Rastegar, Reza and Brown, Tim and Nunes, Gregory and Delilla, Daniel and Alregib, Ghassan},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={Visual Attention-Guided Learning With Incomplete Labels for Seismic Fault Interpretation}, 
+  year={2024},
+  volume={62},
+  number={},
+  pages={1-12},
+  keywords={Visualization;Training;Three-dimensional displays;Data models;Annotations;Task analysis;Surveys;Deep learning (DL);fault interpretation;finetuning;visual attention},
+  doi={10.1109/TGRS.2024.3370037}}
 ```
 
 # Setting up the Environment and Installing Dependencies
